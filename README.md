@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Henry Weather
 
-## Available Scripts
+### Instrucciones para correr el proyecto
 
-In the project directory, you can run:
+Desde la carpeta raiz "weather-react" se pueden ejecutar los siguientes comandos:
 
-### `npm start`
+#### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Comienza a correr la aplicación de forma local por lo que se puede ver desde el navegador accediendo a
+http://localhost:3000
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+No es necesario volver a correr el proyecto cada vez que se realice un cambio sino que se verá automáticamente reflejando en el navegador.
 
-### `npm test`
+#### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ejecuta los tests indicando el resultado de cada uno de ellos por consola. Para más información sobre este tema se puede consultar el siguiente link: [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
 
-### `npm run build`
+### Ejercitación
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Título
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. Cambie el nombre actual del título por "Henry - Weather App"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Centrar el título utilizando el archivo "App.css"
 
-### `npm run eject`
+#### Barra de búsqueda
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Crear una carpeta llamada "componentes" dentro de la carpeta "src"
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Crear un componente denominado "Busqueda" que va a utilizarse para luego poder encontrar las ciudades sobre las cuales se desee ver el clima actual. Para ello deberán crearse dentro de la carpeta de "componentes" los siguientes dos archivos:
+  * Busqueda.js
+  * Busqueda.css
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Crear una barra de navegación en la cual se incluya el logo de "Henry" (Pueden encontrarlo en la carpeta "public"), el título previamente definido y un cuadro de búsqueda. La página final hasta este momento debería quedar similar a la siguiente:
 
-## Learn More
+![Alt](./img-screen/barra-busqueda.png "img")
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*Nota: Recordar de importar el nuevo componente en el archivo "App.js" para poder utilizarlo desde allí*
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Tarjeta de clima
 
-### Code Splitting
+5. Crear otro componente dentro de la carpeta "Componentes" denominado "Tarjeta" que va a utilizarse para mostrar el clima actual en alguna ciudad elegida
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+6. Agregar tres tarjetas de prueba para ver como quedarían en pantalla. Las mismas deben estar centradas. Debería verse similar a lo siguiente:
 
-### Analyzing the Bundle Size
+*Luego estas tarjetas se irán agregando dinámicamente*
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+FIN
+# weather-react
