@@ -34,7 +34,7 @@ Ejecuta los tests indicando el resultado de cada uno de ellos por consola. Para 
 
 4. Crear una barra de navegación en la cual se incluya el logo de "Henry" (Pueden encontrarlo en la carpeta "public"), el título previamente definido y un cuadro de búsqueda. La página final hasta este momento debería quedar similar a la siguiente:
 
-![Alt](./img-screen/barra-busqueda.png "img")
+![Alt](./img-screen/barra-busqueda.png)
 
 *Nota: Recordar de importar el nuevo componente en el archivo "App.js" para poder utilizarlo desde allí*
 
@@ -45,8 +45,3 @@ Ejecuta los tests indicando el resultado de cada uno de ellos por consola. Para 
 6. Agregar tres tarjetas de prueba para ver como quedarían en pantalla. Las mismas deben estar centradas. Debería verse similar a lo siguiente:
 
 *Luego estas tarjetas se irán agregando dinámicamente*
-
-
-
-FIN
-# weather-react
