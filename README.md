@@ -44,4 +44,10 @@ Ejecuta los tests indicando el resultado de cada uno de ellos por consola. Para 
 
 6. Agregar tres tarjetas de prueba para ver como quedarían en pantalla. Las mismas deben estar centradas. Debería verse similar a lo siguiente:
 
+![Alt](./img-screen/tarjetas-clima.png)
+
 *Luego estas tarjetas se irán agregando dinámicamente*
+
+#### Tablero general
+
+7. Para poder agrupar las tarjetas y facilitar luego la carga dinámica de las mismas es recomendable agruparlas dentro de un componente superior al que denominaremos "Tablero".
