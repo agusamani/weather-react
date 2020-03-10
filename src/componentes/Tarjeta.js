@@ -2,14 +2,14 @@ import React from 'react';
 import './Tarjeta.css';
 import Sun from '../sun.png'
 
-function Tarjeta() {
+const Tarjeta = (props) => {
   return (
     <div className="card">
       <div id="closeIcon" className="row">
           <a href="#" className="btn btn-sm btn-danger">X</a>
       </div>
       <div className="card-body">
-        <h5 className="card-title">Nombre de la Ciudad</h5>
+        <h5 className="card-title">{props.nombreCiudad}</h5>
         <div className="row">
           <div className="col-sm-4 col-md-4 col-lg-4">
             <p>Min</p>
