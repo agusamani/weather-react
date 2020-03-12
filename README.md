@@ -68,8 +68,12 @@ Ejecuta los tests indicando el resultado de cada uno de ellos por consola. Para 
 
 Ayuda: La App va a ser quien deberá contener los datos de las tarjetas a renderizar y pasárselos al componente Tablero como una propiedad. Para ello recordar como utilizar las funciones de callback entre componentes*
 
-![Alt](./img-screen/agregar-ciudad.gif)
+<p align="center">
+  <img src="./img-screen/agregar-ciudad.gif" alt="Gif" />
+</p>
 
 10. Implementar un método para remover las tarjetas que ya se encuentran agregadas al Tablero, el mismo se debe ejecutar al hacer click en la cruz roja de la parte superior derecha de cada Tarjeta
 
-![Alt](./img-screen/borrar-ciudad.gif)
+<p align="center">
+  <img src="./img-screen/borrar-ciudad.gif" alt="Gif" />
+</p>
