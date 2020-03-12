@@ -9,16 +9,15 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tarjetas: ["Buenos Aires", "San Pablo", "Bogota", "Lima", "Santiago"]
+      tarjetas: []
     };
     this.handleAgregar = this.handleAgregar.bind(this);
     this.handleBorar = this.handleBorar.bind(this);
   }
 
-  handleAgregar(nombreCiudad) {
-    console.log(nombreCiudad);
+  handleAgregar(nuevo) {
     this.setState({
-      tarjetas: [...this.state.tarjetas, nombreCiudad]
+      tarjetas: [...this.state.tarjetas, nuevo]
     });
   }
 

@@ -22,8 +22,8 @@ class Tablero extends React.Component {
     this.props.onBorrar(i);
   }
 
-  renderTarjeta(i, nombreCiudad){
-    return(<Tarjeta index= {i} nombreCiudad = {nombreCiudad} onBorrar={this.handleBorrar} />);
+  renderTarjeta(i, data){
+    return(<Tarjeta index= {i} data = {data} onBorrar={this.handleBorrar} />);
   }
 
   render(){
