@@ -62,4 +62,14 @@ Ejecuta los tests indicando el resultado de cada uno de ellos por consola. Para 
 
 #### Adición/Eliminación dinámicamente
 
-9.
+9. Ahora queremos que las tarjetas se agreguen mediante el botón "Agregar" de la barra de búsqueda por lo que es necesario crear un método que sea invocado al hacer click en dicho botón y que cree una nueva tarjeta.
+
+*Por el momento la crearemos únicamente con el nombre de la ciudad buscada sin tomar en consideración la temperatura ya que ello se pedirá más adelante
+
+Ayuda: La App va a ser quien deberá contener los datos de las tarjetas a renderizar y pasárselos al componente Tablero como una propiedad. Para ello recordar como utilizar las funciones de callback entre componentes*
+
+![Alt](./img-screen/agregar-ciudad.gif)
+
+10. Implementar un método para remover las tarjetas que ya se encuentran agregadas al Tablero, el mismo se debe ejecutar al hacer click en la cruz roja de la parte superior derecha de cada Tarjeta
+
+![Alt](./img-screen/borrar-ciudad.gif)

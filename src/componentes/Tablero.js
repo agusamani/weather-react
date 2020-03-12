@@ -7,22 +7,23 @@ class Tablero extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      tarjetas: ["Buenos Aires", "San Pablo", "Bogota", "Lima", "Santiago"]
-    };
+    this.handleBorrar = this.handleBorrar.bind(this);
   }
 
   createBoard() {
     let board = [];
-    let prueba = "";
-    for (var i = 0; i < this.state.tarjetas.length; i++) {
-      board.push(this.renderTarjeta(this.state.tarjetas[i]));
+    for (var i = 0; i < this.props.tarjetas.length; i++) {
+      board.push(this.renderTarjeta(i, this.props.tarjetas[i]));
     }
     return board;
   }
 
-  renderTarjeta(nombreCiudad){
-    return(<Tarjeta nombreCiudad = {nombreCiudad} />);
+  handleBorrar(i){
+    this.props.onBorrar(i);
+  }
+
+  renderTarjeta(i, nombreCiudad){
+    return(<Tarjeta index= {i} nombreCiudad = {nombreCiudad} onBorrar={this.handleBorrar} />);
   }
 
   render(){

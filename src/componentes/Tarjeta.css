@@ -9,7 +9,7 @@
 
 #closeIcon {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-right: 8px;
   margin-top: 8px;
 }
