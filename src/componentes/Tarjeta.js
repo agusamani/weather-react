@@ -1,6 +1,7 @@
 import React from 'react';
 import './Tarjeta.css';
 import Sun from '../sun.png'
+import { Link } from 'react-router-dom';
 
 class Tarjeta extends React.Component {
 
@@ -12,15 +13,21 @@ class Tarjeta extends React.Component {
   clickBorrar() {
     this.props.onBorrar(this.props.index);
   }
-
+  join(str) {
+    const string = str.replace(' ', '');
+    return string
+  }
   render() {
+    const nameCity = this.join(this.props.data.nombreCiudad)
     return (
       <div className="card">
         <div id="closeIcon" className="row">
             <button onClick={this.clickBorrar} className="btn btn-sm btn-danger">X</button>
         </div>
         <div className="card-body">
-          <h5 className="card-title">{this.props.data.nombreCiudad}</h5>
+          <Link to={`/${nameCity}/${this.props.data.id}`} >
+            <h5 className="card-title">{this.props.data.nombreCiudad}</h5>
+          </Link>
           <div className="row">
             <div className="col-sm-4 col-md-4 col-lg-4">
               <p>Min</p>

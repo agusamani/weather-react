@@ -2,6 +2,7 @@ import React from 'react';
 import './Tablero.css';
 
 import Tarjeta from './Tarjeta.js'
+import { Link } from 'react-router-dom';
 
 class Tablero extends React.Component {
 
@@ -27,10 +28,17 @@ class Tablero extends React.Component {
   }
 
   render(){
+    const { tarjetas, onBorrar } = this.props;
     return (
-      <div className="row">
-        {this.createBoard()}
-      </div>
+      <React.Fragment>
+        <div className="row">
+          {/* {this.createBoard()} */}
+          {tarjetas.map((item, i) => <Tarjeta key= {i} data = {item} onBorrar={() => onBorrar(i)} />)}
+        </div>
+        <div className="about">
+          <Link to="/about"> About</Link>
+        </div>
+      </React.Fragment>
     );
   }
 }

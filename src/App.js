@@ -1,8 +1,12 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
 import './App.css';
 
 import Busqueda from './componentes/Busqueda.js'
 import Tablero from './componentes/Tablero.js'
+import About from './componentes/About';
+import Ciudad from './componentes/Ciudad';
 
 class App extends React.Component {
 
@@ -31,9 +35,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <Busqueda onAgregar={this.handleAgregar} />
-        <div className="row">
-          <Tablero tarjetas={this.state.tarjetas} onBorrar={this.handleBorar}/>
-        </div>
+          <div className="row">
+            <Switch>
+              <Route path="/:ciudad/:id" render={props =>  <Ciudad {...props} tarjetas={this.state.tarjetas} /> } />
+              <Route path="/about" component={About} />
+              <Route exact path="/" render={() => <Tablero tarjetas={this.state.tarjetas} onBorrar={this.handleBorar}/> } />
+            </Switch>
+          </div>
       </div>
     );
   }

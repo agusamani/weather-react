@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../logoHenry.png'
 import './Busqueda.css';
+import { withRouter, Link } from 'react-router-dom';
 
 class Busqueda extends React.Component {
 
@@ -37,7 +38,15 @@ class Busqueda extends React.Component {
           this.setState({
             tempMin: Math.round(recurso.main.temp_min),
             tempMax: Math.round(recurso.main.temp_max),
-            icon: recurso.weather[0].icon
+            icon: recurso.weather[0].icon,
+            id: recurso.id,
+            wind: recurso.wind.speed,
+            temp: recurso.main.temp,
+            name: recurso.name,
+            weather: recurso.weather[0].main,
+            clouds: recurso.clouds.all,
+            latitud: recurso.coord.lat,
+            longitud: recurso.coord.lon
           });
           this.props.onAgregar(this.state);
         } else {
@@ -49,17 +58,23 @@ class Busqueda extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-dark bg-dark">
-        <span className="navbar-brand">
-          <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
-          Henry - Weather App
-        </span>
-        <form className="form-inline my-2 my-lg-0" onSubmit={this.handleSubmit}>
-          <input className="form-control mr-sm-2" type="search" placeholder="Ciudad..." aria-label="Search" onChange={this.handleInputChange}/>
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit" disabled={!this.state.nombreCiudad}>Agregar</button>
-        </form>
+        <Link to="/">
+          <span className="navbar-brand">
+            <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
+            Henry - Weather App
+          </span>
+        </Link>
+        {
+          this.props.location.pathname === '/' &&
+            <form className="form-inline my-2 my-lg-0" onSubmit={this.handleSubmit}>
+              <input className="form-control mr-sm-2" type="search" placeholder="Ciudad..." aria-label="Search" onChange={this.handleInputChange}/>
+              <button className="btn btn-outline-success my-2 my-sm-0" type="submit" disabled={!this.state.nombreCiudad}>Agregar</button>
+            </form>
+        }
+
       </nav>
     );
   }
 }
 
-export default Busqueda;
+export default withRouter(Busqueda);
